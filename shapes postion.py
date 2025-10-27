@@ -14,3 +14,10 @@ class ShapesPosition:
         
         self._x += x
         self._y += y
+
+#trying to follow the inheritance example from kokchun
+class Circle(ShapesPosition): #this doesn't feel right
+
+    def __init__(self, shape):
+        super().__init__(shape)
+        self.radius = 1 #something is def not right
