@@ -1,7 +1,10 @@
 from numbers import Number 
 import math 
-from shapes_position import ShapesPosition #the parent class
+from shapes_position import ShapesPosition 
+"""this is the Cricle class, it has inherited x and y off of ShapesPosition
 
+The reason why it is a diffrent class and seperated from rektangle is quite simple, its diffrent types of math on both shapes
+with the circle needing pi to do its math, while the rektangle doesn't"""
 class Circle(ShapesPosition):
 
     def __init__(self, x, y, radius):
