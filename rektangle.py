@@ -33,6 +33,7 @@ class Rektangle(ShapesPosition):
     @height.setter
     def height(self, value):
         self._height = value
+
     @property
     def length(self):
         return self._length
@@ -48,3 +49,35 @@ class Rektangle(ShapesPosition):
     @property
     def area(self):
         return self._height * self._length
+    
+    def __str__(self):
+        return f"Rektangle, height = {self.height}, length = {self.length}, center at {self.x}, {self.y}"
+    
+    def __repr__(self):
+        return f"Rektangle(x={self.x}, y={self.y}, height={self.height}, length={self.length})"
+    
+    def __eq__(self, other):
+        if not isinstance(other, Rektangle):
+            raise TypeError(f"Can't compare {type(other)} it has to be a rektangle")
+        return self.height == other.height and self.length == other.length
+    
+    def __gt__(self, other):
+        if not isinstance(other, Rektangle):
+            raise TypeError(f"Can't compare {type(other)} it has to be a rektangle")
+        return self.height > other.height and self.length > other.length
+    
+    def __lt__(self, other):
+        if not isinstance(other, Rektangle):
+            raise TypeError(f"Can't compare {type(other)} it has to be a rektangle")
+        return self.height < other.height and self.length < other.length
+    
+    def __ge__(self, other):
+        if not isinstance(other, Rektangle):
+            raise TypeError(f"Can't compare {type(other)} it has to be a rektangle")
+        return self.height >= other.height and self.length >= other.length
+    
+    def __le__(self,other):
+        if not isinstance(other, Rektangle):
+            raise TypeError(f"Can't compare {type(other)} it has to be a rekangle")
+        return self.height <= other.height and self.length <= other.length
+        

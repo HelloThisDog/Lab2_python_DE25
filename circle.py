@@ -37,3 +37,35 @@ class Circle(ShapesPosition):
     @property
     def area(self): #the area math
         return math.pi * self.radius ** 2
+    
+    """operator over load area"""
+    def __str__(self):
+        return f"Cricle, Radius = {self.radius}, center at {self.x}, {self.y}"
+    
+    def __repr__(self):
+        return f"Cricle(x={self.x}, y={self.y}, radius={self.radius})"
+    
+    def __eq__(self, other):
+        if not isinstance(other, Circle):
+            raise TypeError(f"Can't compare {type(other)} it has to be a circle")
+        return self.radius == other.radius
+    
+    def __gt__(self, other):
+        if not isinstance(other, Circle):
+            raise TypeError(f"Can't cimpare {type(other)} it has to be a circle")
+        return self.radius > other.radius
+    
+    def __lt__(self, other):
+        if not isinstance(other, Circle):
+            raise TypeError(f"can't compare {type(other)} it has to be a circle")
+        return self.radius < other.radius
+    
+    def __ge__(self, other):
+        if not isinstance(other, Circle):
+            raise TypeError(f"can't compare {type(other)} it has to be a circle")
+        return self.radius >= other.radius
+    
+    def __le__(self, other):
+        if not isinstance(other, Circle):
+            raise TypeError(f"can't compare {type(other)} it has to be a circle")
+        return self.radius <= other.radius
