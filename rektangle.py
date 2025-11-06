@@ -30,9 +30,16 @@ class Rektangle(ShapesPosition):
     def height(self):
         return self._height
     
+    @height.setter
+    def height(self, value):
+        self._height = value
     @property
     def length(self):
         return self._length
+    
+    @length.setter
+    def length(self, value):
+        self._length = value
     
     @property
     def perimeter(self):

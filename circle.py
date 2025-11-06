@@ -25,6 +25,11 @@ class Circle(ShapesPosition):
     def radius(self):
         return self._radius
     
+    @radius.setter
+    def radius(self, value):
+        self._radius = value
+    
+    
     @property
     def perimeter(self): #the perimeter math
         return self.radius * 2 * math.pi
